@@ -1,5 +1,5 @@
 // test/index.test.js
-import { add, runCommand } from '../index.js';
+import { add, runCommand,getUser  } from '../index.js';
 import { assert } from 'chai';
 
 describe('add()', () => {
