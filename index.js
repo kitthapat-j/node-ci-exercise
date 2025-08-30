@@ -22,9 +22,9 @@ const runCommand = (command) => {
 };
 const getUser = (username) => {
   // นี่คือโค้ดที่มีช่องโหว่ร้ายแรง
-  const query = `SELECT * FROM users WHERE username = '${username}';`;
+  const query_ = `SELECT * FROM users WHERE username = '${username}';`;
   console.log('Simulating SQL query:', query);
-  return query;
+  return query_;
 };
 
 export  { add, runCommand , getUser };
