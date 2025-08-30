@@ -22,3 +22,11 @@ describe('runCommand()', () => {
     }, 100);
   });
 });
+
+
+describe('getUser()', () => {
+  it('should return a valid SQL query string for a given username', () => {
+    const query = getUser('testuser');
+    assert.equal(query, `SELECT * FROM users WHERE username = 'testuser';`);
+  });
+});
