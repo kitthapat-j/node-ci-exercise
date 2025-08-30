@@ -1,4 +1,7 @@
 // index.js
+
+import { exec } from 'child_process';
+
 const add = (a, b) => {
   if (typeof a !== 'number' || typeof b !== 'number') {
     throw new TypeError('Inputs must be numbers');
@@ -6,9 +9,16 @@ const add = (a, b) => {
   ////original
   //return a + b;
   ////eslint
-  //const result = a + b;
+  //result = a + b;
   //return result;
   //CodeQL
-  return eval(`${a} + ${b}`); 
+  return a+b; 
 };
-export default add;
+// ฟังก์ชันใหม่ที่มีช่องโหว่
+const runCommand = (command) => {
+  exec(`echo ${command}`, (error, stdout, stderr) => {
+    console.log(stdout);
+  });
+};
+
+export  { add, runCommand };
