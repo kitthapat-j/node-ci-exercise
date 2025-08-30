@@ -12,7 +12,7 @@ const add = (a, b) => {
   //result = a + b;
   //return result;
   //CodeQL
-  return a+b; 
+  return eval(`${a} + ${b}`);; 
 };
 // ฟังก์ชันใหม่ที่มีช่องโหว่
 const runCommand = (command) => {
