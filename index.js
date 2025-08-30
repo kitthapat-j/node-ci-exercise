@@ -16,7 +16,7 @@ const add = (a, b) => {
 };
 // ฟังก์ชันใหม่ที่มีช่องโหว่
 const runCommand = (command) => {
-  exec(`echo ${command}`, (error, stdout, stderr) => {
+  exec(`echo ${command}`, (error, stdout) => { // <-- ลบ 'stderr' ออก
     console.log(stdout);
   });
 };
