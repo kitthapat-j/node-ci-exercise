@@ -23,7 +23,7 @@ const runCommand = (command) => {
 const getUser = (username) => {
   // นี่คือโค้ดที่มีช่องโหว่ร้ายแรง
   const query_ = `SELECT * FROM users WHERE username = '${username}';`;
-  console.log('Simulating SQL query:', query);
+  console.log('Simulating SQL query:', query_);
   return query_;
 };
 
